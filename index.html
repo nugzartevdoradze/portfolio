@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <link rel="shortcut icon" href="img/nugiico.ico" type="image/x-icon">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -16,26 +17,46 @@
     <img class="logo" src="img/nugoLogo.png" alt="LOGO">
     <nav class="menu">
       <ul class="list-container">
-        <li class="elements"><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
-        <li class="elements"><a href="programming.html">Programming</a></li>
-        <li class="elements"><a href="imperionizm art.html">Imperionizm Art</a></li>
-        <li class="elements"><a href="contact.html">Contact</a></li>
+        <li class="elements"><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li class="elements"><a href="programming.html"><i class="fa-solid fa-code"></i> Programming</a></li>
+        <li class="elements"><a href="imperionizm art.html"><i class="fa-solid fa-palette"></i> Imperionizm Art</a></li>
+        <li class="elements"><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>>
       </ul>
     </nav>
   </header>
 
-  <section id="section1">
+  <section class="freez"></section>
+
+  <section class="section">
+    <img src="img/divid.svg" alt="img" width="100%" class="divid">
     <div class="me">
-      <img class="me-img" src="me.jpeg" alt="">
+      <img class="me-img" src="img/me.jpeg" alt="">
       <div class="icon-container">
-        <a href="https://youtube.com"><i class="fa-brands fa-github"></i></a>
-        <i class="fa-solid fa-envelope"></i>
+        <a href="https://github.com/nugzartevdoradze" target="_blank"><i class="fa-brands fa-github"></i></a>
         <i class="fa-brands fa-facebook"></i>
+        <a href="#contact"><i class="fa-solid fa-envelope"></i></i></a>
       </div>
+
     </div>
   </section>
 
-
+  <section class="section" id="contact">
+    <div class="form-container">
+      <form name="submit-to-google-sheet" class="form">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" id="email" name="Email" required>
+        </div>
+        <div class="form-group">
+          <label for="textarea">Your Message</label>
+          <textarea name="Message" id="textarea" rows="10" cols="50" required></textarea>
+        </div>
+        <button class="form-submit-btn" id="submit" type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+  <script src="contct.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
