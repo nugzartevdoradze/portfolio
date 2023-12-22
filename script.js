@@ -17,4 +17,20 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         previousScrollY = currentScrollY;
     });
+
+    let button = document.querySelector(".rotate");
+    let wrapper = document.querySelector(".skill-wrapper");
+
+    button.onclick = function () {
+        wrapper.classList.toggle("active");
+        wrapper1.classList.remove("active1");
+    }
+
+    let button1 = document.querySelector(".rotate1");
+    let wrapper1 = document.querySelector(".skill-wrapper1");
+
+    button1.onclick = function () {
+        wrapper1.classList.toggle("active1");
+        wrapper.classList.remove("active");
+    }
 });
