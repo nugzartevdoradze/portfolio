@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+.section1-vrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.skill-wrapper,
+.skill-wrapper1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rotateol {
+    position: absolute;
+    transform: translateX(-50%);
+    height: 100px;
+    width: 100px;
+    padding: 30px;
+    font-size: clamp(10px, 3vw, 1.5rem);
+    font-family: "Courgette";
+    border: none;
+    background: rgb(104, 136, 235);
+    border: 4px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    padding: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.rotate {
+    left: 20%;
+}
+
+.rotate:hover {
+    background-color: rgb(65, 108, 235);
+    color: #fff;
+
+}
+
+.skill {
+    position: absolute;
+    transform: translateX(-50%);
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+    font-size: 2vw;
+    border: none;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: 10vw;
+    z-index: 0;
+    transition-delay: calc(0.1s * var(--i));
+    transition: 1s;
+}
+
+.skill-container {
+    left: -10%;
+}
+
+.skill-wrapper.active .skill-container {
+    left: -10%;
+    transform: translateX(0) rotate(calc(360deg / 4 * var(--i)));
+}
+
+.rotate1 {
+    left: 50%;
+}
+
+.rotate1:hover {
+    background-color: rgb(65, 108, 235);
+    color: #fff;
+}
+
+.skill-wrapper1.active1 .skill-container1 {
+    left: 40%;
+    transform: translateX(0) rotate(calc(360deg / 5 * var(--i)));
+}

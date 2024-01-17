@@ -33,4 +33,13 @@ document.addEventListener("DOMContentLoaded", () => {
         wrapper1.classList.toggle("active1");
         wrapper.classList.remove("active");
     }
+
+
+    let button2 = document.querySelector(".rotate2");
+    let wrapper2 = document.querySelector(".skill-wrapper2");
+
+    button2.onclick = function () {
+        wrapper2.classList.toggle("active2");
+        wrapper.classList.remove("active");
+    }
 });
