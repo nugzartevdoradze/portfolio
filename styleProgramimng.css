@@ -1,18 +1,95 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 
+.section1-wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.skill-wrapper,
+.skill-wrapper1,
+.skill-wrapper2 {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.rotateol {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: 30%;
+    padding: 30px;
+    font-size: clamp(10px, 3vw, 1.5rem);
+    font-family: "Courgette";
+    background: #6888eb;
+    border: 4px solid #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 3;
+}
+
+.rotateol:hover {
+    background-color: rgb(65, 108, 235);
+    color: #fff;
+}
+
+.skill {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-origin: 150px;
+    font-size: 1.8rem;
+    z-index: 0;
+    transition-delay: calc(0.1s * var(--i));
+    transition: 1s;
+}
+
+.skill-wrapper.active .skill-container {
+    transform: translateY(-50%) rotate(calc(360deg / 4 * var(--i)));
+    left: 13%;
+}
+
+.skill-wrapper1.active1 .skill-container1 {
+    transform: translateY(-50%) rotate(calc(360deg / 5 * var(--i)));
+    left: 13%;
+}
+
+.skill-wrapper2.active2 .skill-container2 {
+    transform: translateY(-50%) rotate(calc(360deg / 2 * var(--i)));
+    left: 13%;
+}
+
+/* 
 .section1-vrapper {
     position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
 .skill-wrapper,
-.skill-wrapper1 {
+.skill-wrapper1, {
     position: relative;
     display: flex;
     justify-content: center;
@@ -20,8 +97,7 @@
 }
 
 .rotateol {
-    position: absolute;
-    transform: translateX(-50%);
+    transform: translateX(0);
     height: 100px;
     width: 100px;
     padding: 30px;
@@ -75,7 +151,7 @@
 
 .skill-wrapper.active .skill-container {
     left: -10%;
-    transform: translateX(0) rotate(calc(360deg / 4 * var(--i)));
+    transform: translateX(50%) rotate(calc(360deg / 4 * var(--i)));
 }
 
 .rotate1 {
@@ -90,4 +166,4 @@
 .skill-wrapper1.active1 .skill-container1 {
     left: 40%;
     transform: translateX(0) rotate(calc(360deg / 5 * var(--i)));
-}
+} */

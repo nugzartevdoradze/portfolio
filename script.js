@@ -18,28 +18,20 @@ document.addEventListener("DOMContentLoaded", () => {
         previousScrollY = currentScrollY;
     });
 
-    let button = document.querySelector(".rotate");
-    let wrapper = document.querySelector(".skill-wrapper");
+    document.querySelector(".menu").addEventListener("click", () => { 
+        document.querySelector(".nav-bar").classList.add("active");
+    })
+    document.querySelector(".close").addEventListener("click", () => { 
+        document.querySelector(".nav-bar").classList.remove("active") 
+    })
+    document.querySelectorAll(".element").forEach((element) => {
+        element.addEventListener("click", () => { document.querySelector(".nav-bar").classList.remove("active") })
+    });
 
-    button.onclick = function () {
-        wrapper.classList.toggle("active");
-        wrapper1.classList.remove("active1");
-    }
-
-    let button1 = document.querySelector(".rotate1");
-    let wrapper1 = document.querySelector(".skill-wrapper1");
-
-    button1.onclick = function () {
-        wrapper1.classList.toggle("active1");
-        wrapper.classList.remove("active");
-    }
-
-
-    let button2 = document.querySelector(".rotate2");
-    let wrapper2 = document.querySelector(".skill-wrapper2");
-
-    button2.onclick = function () {
-        wrapper2.classList.toggle("active2");
-        wrapper.classList.remove("active");
-    }
 });
+
+
+// document.getElementById("text-area").addEventListener("blur", () => {
+//     if (!textarea.value.trim()) { document.getElementById("three-text").style = "transform: translate(10px, 10px); background: transparent; z-index: 0;"; }
+// });
+
