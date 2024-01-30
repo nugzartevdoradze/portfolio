@@ -257,22 +257,45 @@ body {
 }
 @media screen and (max-width: 768px) {
   #home {
+    justify-content: center;
     flex-direction: column;
   }
 }
 #home .me {
+  position: relative;
   width: 50%;
   height: 70%;
   display: flex;
   justify-content: center;
 }
+@media screen and (max-width: 768px) {
+  #home .me {
+    width: 20%;
+    height: 50%;
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  #home .me {
+    width: 80%;
+    height: 30%;
+    font-size: 2rem;
+    background: rgba(180, 0, 0, 0.0745098039);
+  }
+}
 #home .me .me-img {
-  position: absolute;
   border-radius: 40px;
   border: 5px solid black;
   z-index: -1;
 }
+@media screen and (max-width: 576px) {
+  #home .me .me-img {
+    width: 90%;
+    border-radius: 20px;
+  }
+}
 #home .me .icon-container {
+  position: absolute;
   width: 20%;
   height: 100%;
   display: flex;
@@ -299,6 +322,13 @@ body {
   font-family: "Courgette", cursive;
   font-size: 3rem;
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  #home .bt-tx {
+    width: 100%;
+    height: 50%;
+    font-size: 2rem;
+  }
 }
 
 .cont-me {
