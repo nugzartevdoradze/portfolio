@@ -1,8 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 
-.section1-wrapper {
+#section1 {
     width: 100vw;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section1-wrapper {
+    width: 100vw;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -21,8 +29,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 30%;
-    height: 30%;
+    width: 8rem;
+    height: 8rem;
     padding: 30px;
     font-size: clamp(10px, 3vw, 1.5rem);
     font-family: "Courgette";
@@ -38,7 +46,7 @@
 }
 
 .rotateol:hover {
-    background-color: rgb(65, 108, 235);
+    background-color: #416ceb;
     color: #fff;
 }
 
@@ -62,108 +70,62 @@
 }
 
 .skill-wrapper.active .skill-container {
-    transform: translateY(-50%) rotate(calc(360deg / 4 * var(--i)));
-    left: 13%;
+    transform: translate(-300%, -50%) rotate(calc(360deg / 4 * var(--i)));
 }
 
 .skill-wrapper1.active1 .skill-container1 {
-    transform: translateY(-50%) rotate(calc(360deg / 5 * var(--i)));
-    left: 13%;
+    transform: translate(-300%, -50%) rotate(calc(360deg / 5 * var(--i)));
 }
 
 .skill-wrapper2.active2 .skill-container2 {
-    transform: translateY(-50%) rotate(calc(360deg / 2 * var(--i)));
-    left: 13%;
+    transform: translate(-300%, -50%) rotate(calc(360deg / 2 * var(--i)));
 }
 
-/* 
-.section1-vrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+@media screen and (max-width: 1024px) {
+    .section1-wrapper {
+        gap: 0;
+        flex-direction: column;
+    }
+
+    .skill-wrapper,
+    .skill-wrapper1,
+    .skill-wrapper2 {
+        width: 80vw;
+    }
+
+    .rotateol {
+        width: 6rem;
+        height: 6rem;
+        padding: 20px;
+        font-size: clamp(8px, 3vw, 1.2rem);
+    }
+
+    .skill {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+        transform-origin: 120px;
+    }
 }
 
-.skill-wrapper,
-.skill-wrapper1, {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@media screen and (max-width: 567px) {
+    .skill-wrapper,
+    .skill-wrapper1,
+    .skill-wrapper2 {
+        width: 90vw;
+    }
+
+    .rotateol {
+        width: 5rem;
+        height: 5rem;
+        padding: 15px;
+        font-size: clamp(8px, 3vw, 1rem);
+    }
+
+    .skill {
+        width: 30px;
+        height: 30px;
+        font-size: 1.2rem;
+        transform-origin: 90px;
+    }
 }
-
-.rotateol {
-    transform: translateX(0);
-    height: 100px;
-    width: 100px;
-    padding: 30px;
-    font-size: clamp(10px, 3vw, 1.5rem);
-    font-family: "Courgette";
-    border: none;
-    background: rgb(104, 136, 235);
-    border: 4px solid rgb(255, 255, 255);
-    border-radius: 50%;
-    padding: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-.rotate {
-    left: 20%;
-}
-
-.rotate:hover {
-    background-color: rgb(65, 108, 235);
-    color: #fff;
-
-}
-
-.skill {
-    position: absolute;
-    transform: translateX(-50%);
-    height: 40px;
-    width: 40px;
-    padding: 10px;
-    font-size: 2vw;
-    border: none;
-    background: #ffffff;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform-origin: 10vw;
-    z-index: 0;
-    transition-delay: calc(0.1s * var(--i));
-    transition: 1s;
-}
-
-.skill-container {
-    left: -10%;
-}
-
-.skill-wrapper.active .skill-container {
-    left: -10%;
-    transform: translateX(50%) rotate(calc(360deg / 4 * var(--i)));
-}
-
-.rotate1 {
-    left: 50%;
-}
-
-.rotate1:hover {
-    background-color: rgb(65, 108, 235);
-    color: #fff;
-}
-
-.skill-wrapper1.active1 .skill-container1 {
-    left: 40%;
-    transform: translateX(0) rotate(calc(360deg / 5 * var(--i)));
-} */
