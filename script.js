@@ -18,16 +18,20 @@ document.addEventListener("DOMContentLoaded", () => {
         previousScrollY = currentScrollY;
     });
 
-    document.querySelector(".menu").addEventListener("click", () => {
+    document.querySelector(".menu").addEventListener("click", () => { 
         document.querySelector(".nav-bar").classList.add("active");
     })
-    document.querySelector(".close").addEventListener("click", () => {
-        document.querySelector(".nav-bar").classList.remove("active")
+    document.querySelector(".close").addEventListener("click", () => { 
+        document.querySelector(".nav-bar").classList.remove("active") 
     })
-    document.querySelectorAll(".elements").forEach((element) => {
-        element.addEventListener("click", () => {
-            document.querySelector(".nav-bar").classList.remove("active")
-        })
+    document.querySelectorAll(".element").forEach((element) => {
+        element.addEventListener("click", () => { document.querySelector(".nav-bar").classList.remove("active") })
     });
 
 });
+
+
+// document.getElementById("text-area").addEventListener("blur", () => {
+//     if (!textarea.value.trim()) { document.getElementById("three-text").style = "transform: translate(10px, 10px); background: transparent; z-index: 0;"; }
+// });
+
